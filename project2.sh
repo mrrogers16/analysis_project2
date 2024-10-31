@@ -1,7 +1,7 @@
 #!/bin/bash
 
-if [$# -ne 1 ]; then
-    echo "Usage: bash project2.sh controlfile.txt"
+if [ $# -ne 1 ]; then
+    echo "Usage: bash $0 controlfile.txt"
     exit 1
 fi
 
