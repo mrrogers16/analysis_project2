@@ -8,7 +8,7 @@ all: project2
 project2: $(OBJ)
 	$(CC) $(CFLAGS) -o project2 $(OBJ)
 
-main.o main.c sorting.h
+main.o: main.c sorting.h
 	$(CC) $(CFLAGS) -c main.c 
 
 generate_data.o: generate_data.c sorting.h
