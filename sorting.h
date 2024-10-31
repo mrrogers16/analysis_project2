@@ -15,9 +15,8 @@ void zigzag(int A[], int N);
 void random_array(int A[], int N);
 
 // Sorting Algos
-long insertSort(int A[], int N);
+long insertionSort(int A[], int N);
 long quickSort(int A[], int N);
 long mergeSort(int A[], int N);
 
-
-#endif 
+#endif

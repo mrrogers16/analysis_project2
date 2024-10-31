@@ -28,9 +28,9 @@ void vee(int A[], int N)
         A[i] = val;
         val -= 2;
     }
-    
+
     // Set initial value of val to handle the other half of the array. If even, val = 1, if odd val = 2
-    if(N % 2 == 0)
+    if (N % 2 == 0)
     {
         val = 1;
     }
@@ -39,7 +39,7 @@ void vee(int A[], int N)
         val = 2;
     }
     // Starting a the new val, add every other val to A[i] finishing up our vee
-    for(int i = mid; i < N; i++)
+    for (int i = mid; i < N; i++)
     {
         A[i] = val;
         val += 2;
@@ -56,7 +56,7 @@ void zigzag(int A[], int N)
         // If i is even assign to left and decrement left
         if (i % 2 == 0)
         {
-            A[i] == left--;
+            A[i] = left--;
         }
         // If i is odd assign to right and increment right
         else
