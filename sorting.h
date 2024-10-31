@@ -4,6 +4,9 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+// IO Process
+int processControlFile(const char *control_file_name);
+
 // Data generation functions
 void ascend(int A[], int N);
 void descend(int A[], int N);
