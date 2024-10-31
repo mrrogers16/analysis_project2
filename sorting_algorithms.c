@@ -30,14 +30,31 @@ long insertionSort(int A[], int N)
     return comparisons;
 }
 
-// Quick Sort helper partition
+// Quick Sort helper to partition array
 long partition(int A[], int low, int high, long *comparisons)
 {
     int pivot = A[high]; // Set pivot as last element 
-    int i = low - 1;
+    int i = low - 1; // Initialize i for elements <= pivot  
+    // Loop from low to high - 1 comparing each element with the pivot element
     for (int j = low; j < high; j++)
     {
+        // Increment comparisons for each iteration 
         (*comparisons)++;
-        if ()
+        // If our current element is <= pivot...
+        if (A[j] <= pivot)
+        {
+            // Move small element boundary right one
+            i++;
+            // Swap A[i] and A[j], placing smaller element in correct position 
+            int temp = A[i];
+            A[i] = A[j];
+            A[j] = temp;
+        }
     }
+    // After our loop we swap our pivot (A[high]) with A[i + 1] to put pivot in its final sorted position. 
+    int temp = A[i + 1];
+    A[i + 1] = A[high];
+    A[high] = temp;
+    // Return the final position of the pivot element
+    return i + 1;
 }
